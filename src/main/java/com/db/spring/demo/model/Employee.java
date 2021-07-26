@@ -8,8 +8,8 @@ import javax.persistence.Table;
 //mark class as an Entity
 @Entity
 
-//defining class name as Table name
-//@Table(name = "employee_table")
+//define class name as Table name
+@Table
 public class Employee {
 
 	// Defining employee id as primary key

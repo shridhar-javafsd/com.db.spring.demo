@@ -1,11 +1,7 @@
 package com.db.spring.demo.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.db.spring.demo.model.Employee;
-
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +11,15 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.db.spring.demo.model.Employee;
+import com.db.spring.demo.service.EmployeeService;
+
 //mark class as Controller
 @RestController
+
 public class EmployeeController {
-//autowire the EmployeeService class
+
+	// autowire the EmployeeService class
 	@Autowired
 	EmployeeService employeeService;
 
@@ -29,22 +30,22 @@ public class EmployeeController {
 	}
 
 //creating a get mapping that retrieves the detail of a specific Employee
-	@GetMapping("/Employee/{eid}")
-	private Employee getEmployee(@PathVariable("eid") int eid) {
-		return employeeService.getEmployeeById(eid);
+	@GetMapping("/Employee/{id}")
+	private Employee getEmployee(@PathVariable("id") int id) {
+		return employeeService.getEmployeeById(id);
 	}
 
 //creating a delete mapping that deletes a specified Employee
-	@DeleteMapping("/Employee/{eid}")
-	private void deleteEmployee(@PathVariable("eid") int eid) {
-		employeeService.delete(eid);
+	@DeleteMapping("/Employee/{id}")
+	private void deleteEmployee(@PathVariable("id") int id) {
+		employeeService.delete(id);
 	}
 
 //creating post mapping that post the Employee detail in the database
 	@PostMapping("/Employee")
-	private int saveEmployee(@RequestBody Employee Employee) {
-		employeeService.saveOrUpdate(Employee);
-		return Employee.getEid();
+	private int saveEmployee(@RequestBody Employee employee) {
+		employeeService.saveOrUpdate(employee);
+		return employee.getId();
 	}
 
 //creating put mapping that updates the Employee detail
