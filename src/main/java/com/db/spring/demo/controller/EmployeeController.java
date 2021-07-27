@@ -35,8 +35,6 @@ public class EmployeeController {
 		return employeeService.getAllEmployee();
 	}
 
-//creating a get mapping that retrieves the detail of a specific Employee
-
 	/**
 	 * creating a get mapping that retrieves the detail of a specific Employee
 	 * 

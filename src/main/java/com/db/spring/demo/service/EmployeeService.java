@@ -27,8 +27,7 @@ public class EmployeeService {
 	}
 
 //saving a specific record by using the method save() of CrudRepository
-	public Employee saveOrUpdate(Employee employee) {
-		return 
+	public void saveOrUpdate(Employee employee) {
 		employeeRepository.save(employee);
 	}
 
