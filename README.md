@@ -1,6 +1,7 @@
 # com.db.spring.demo
  Spring boot demo for Deutsche Bank grads July 2021 
 
+<<<<<<< HEAD
 # Junit Testing with Java 
 ## Softwares Required 
 *  Java 11 
@@ -316,6 +317,8 @@ The coverage will determine the overall lines covered in current build
 
 
 
+=======
+>>>>>>> 253e5aa67ee611f182cd13480962c58bcc91a6c2
 # Debugging and Profiling Your java Code 
 ### Tools Required 
 * Spring tool suite 
@@ -421,6 +424,12 @@ Exclude Api/Apps/Libs you wish not monitor
 Repeat the same for Memory Profiling 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 253e5aa67ee611f182cd13480962c58bcc91a6c2
 # Program Documentation
 Code documentation is a necessary evil that every developer has to deal with. Almost every programming language has different ways of approaching code documentation
 
@@ -456,7 +465,27 @@ Basic Tips
 
 
 
+<<<<<<< HEAD
 ## Test REST APIs on Postman 
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##Test REST APIs 
+>>>>>>> 253e5aa67ee611f182cd13480962c58bcc91a6c2
 
 data to be inserted 
 {  
