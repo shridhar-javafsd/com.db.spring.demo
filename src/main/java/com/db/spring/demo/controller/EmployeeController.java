@@ -14,6 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.db.spring.demo.model.Employee;
 import com.db.spring.demo.service.EmployeeService;
 
+/**
+ * 
+ * @author Vaman
+ *
+ */
+
 //mark class as Controller
 @RestController
 
@@ -30,6 +36,16 @@ public class EmployeeController {
 	}
 
 //creating a get mapping that retrieves the detail of a specific Employee
+
+	/**
+	 * creating a get mapping that retrieves the detail of a specific Employee
+	 * 
+	 * @param id
+	 * value for employee id to find  
+	 * @return
+	 * Employee object based on the input Employees id 
+	 */
+
 	@GetMapping("/Employee/{id}")
 	private Employee getEmployee(@PathVariable("id") int id) {
 		return employeeService.getEmployeeById(id);
