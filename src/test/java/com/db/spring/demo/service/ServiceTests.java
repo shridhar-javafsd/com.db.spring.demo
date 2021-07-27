@@ -37,7 +37,7 @@ public class ServiceTests {
 	public static List<Employee> empList;
 
 	@BeforeAll
-	public static void getEmpData() {
+	public static void createEmpData() {
 		empList = new ArrayList<>();
 		empList.add(new Employee(101, "Sonu", 10.5));
 		empList.add(new Employee(102, "Monu", 20.5));
@@ -48,9 +48,7 @@ public class ServiceTests {
 	public void testFindAllEmployees() {
 
 		when(repository.findAll()).thenReturn(empList);
-
 		List<Employee> empList2 = service.getAllEmployee();
-
 		assertEquals(3, empList2.size());
 		verify(repository, times(1)).findAll();
 	}
