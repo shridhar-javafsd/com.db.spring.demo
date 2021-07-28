@@ -38,20 +38,35 @@ public class ServiceTests {
 
 	@BeforeAll
 	public static void createEmpData() {
+
 		empList = new ArrayList<>();
 		empList.add(new Employee(101, "Sonu", 10.5));
 		empList.add(new Employee(102, "Monu", 20.5));
 		empList.add(new Employee(103, "Tonu", 15.5));
 	}
 
+	// @BeforeEach ---
+
 	@Test
 	public void testFindAllEmployees() {
 
 		when(repository.findAll()).thenReturn(empList);
+
 		List<Employee> empList2 = service.getAllEmployee();
+
 		assertEquals(3, empList2.size());
+
 		verify(repository, times(1)).findAll();
 	}
+
+//	@Test
+//	public void testFindEmployeeById() {
+//		when(repository.findById(101).get()).thenReturn(empList.get(0));
+//		Employee emp = service.getEmployeeById(101);
+//		System.out.println(emp.toString());
+//		assertEquals("Sonu", emp.getName());
+//		verify(repository, times(1)).findById(101);
+//	}
 
 	@Test
 	public void testrSaveOrUpdate() {

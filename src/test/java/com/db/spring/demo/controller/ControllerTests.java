@@ -27,6 +27,7 @@ import com.db.spring.demo.model.Employee;
 import com.db.spring.demo.service.EmployeeService;
 
 @ExtendWith(SpringExtension.class)
+//@WebMvcTest(EmployeeController.class)
 @WebMvcTest({ EmployeeController.class, Hello.class })
 public class ControllerTests {
 
@@ -54,6 +55,7 @@ public class ControllerTests {
 		LOG.info("testHello using assertEquals()");
 
 		MvcResult mvcResult = mockMvc.perform(get("/hello")).andReturn();
+
 		assertEquals(200, mvcResult.getResponse().getStatus());
 		assertEquals("Hello world!", mvcResult.getResponse().getContentAsString());
 
